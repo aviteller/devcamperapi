@@ -4,14 +4,16 @@
   "description": "devcamper backend api",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=production node server",
+    "start": "SET NODE_ENV=production && node server",
     "dev": "nodemon server"
   },
   "author": "Avi teller",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
