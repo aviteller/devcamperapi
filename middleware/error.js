@@ -6,13 +6,13 @@ const errorHandler = (err, req, res, next) => {
   let code = err.statusCode || 500;
 
   //log to console
-  console.log("err:", err.stack);
+  console.log(err.stack);
 
   error.message = err.message;
   //mongoose bad objectud
   switch (error.name) {
     case "CastError":
-      message = `Resource not found with id of ${err.value}`;
+      message = `Resource not found`;
       code = 404;
       break;
     case "ValidationError":
